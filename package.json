@@ -4,7 +4,7 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "dev": "bun src/index.html",
+        "dev": "bun --watch src/index.html",
         "lint": "bun install && bun oxlint",
         "fmt": "bun install && bun dprint fmt",
         "typecheck": "bun tsc --noEmit",
