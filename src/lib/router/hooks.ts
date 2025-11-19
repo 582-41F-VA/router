@@ -10,3 +10,12 @@ export function useNavigate(): (to: string) => void {
     const { setPathname } = useContext(NavigationContext);
     return setPathname;
 }
+
+type Location = {
+    pathname: string;
+};
+
+export function useLocation(): Location {
+    const { pathname } = useContext(NavigationContext);
+    return { pathname };
+}

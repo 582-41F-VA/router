@@ -1,10 +1,15 @@
-import { Link } from "lib/router";
+import { Link, useLocation } from "lib/router";
 
 export function Nav() {
+    const { pathname } = useLocation();
     return (
         <>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <span className={pathname === "/" ? "current" : ""}>
+                <Link to="/">Home</Link>
+            </span>
+            <span className={pathname === "/about" ? "current" : ""}>
+                <Link to="/about">About</Link>
+            </span>
         </>
     );
 }
